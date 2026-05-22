@@ -61,3 +61,43 @@ console.log("Optional value: ", optionalValue); // Optional value:  42
 // Use undefined when you want to indicate that a variable has not been assigned a value yet. For example, if you have a
 // variable that will be assigned a value later in the code, you can initialize it with undefined to indicate that it is
 // not yet ready for use.
+
+// OBJECTS
+// In TypeScript, objects are a collection of key-value pairs. They can be defined using object literals or by using
+// interfaces and classes. Objects can have properties and methods, and they can be used to represent complex data structures.
+// Example of an object literal:
+const course = {
+    title: "TypeScript Bootcamp",
+    subTitle: "Learn the language fundamentals",
+    duration: 10,
+    isActive: true,
+    instructor: { // This is a nested object representing the instructor of the course.
+        name: "John Doe",
+        experience: 5
+    },
+
+    getCourseInfo: function() {
+        return `${this.title} by ${this.instructor.name}`;
+    }
+};
+
+console.log(typeof course); // object
+
+console.log(course.title); // TypeScript Bootcamp
+console.log(course.subTitle); // Learn the language fundamentals
+console.log(courseDuration); // 10
+console.log(course.getCourseInfo()); // TypeScript Bootcamp by John Doe
+
+console.log(course.instructor.name); // John Doe
+console.log(course.instructor.experience); // 5
+
+console.log(course);
+// {
+//     title: 'TypeScript Bootcamp',
+//         subTitle: 'Learn the language fundamentals',
+//     duration: 10,
+//     isActive: true,
+//     instructor: { name: 'John Doe', experience: 5 },
+//     getCourseInfo: [Function: getCourseInfo]
+// }
+
